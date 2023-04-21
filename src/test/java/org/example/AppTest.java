@@ -1,13 +1,10 @@
 package org.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -47,8 +44,7 @@ public class AppTest {
         //Thread.sleep(10000);
         driver.findElement(By.xpath("//label[normalize-space()='Option 1']")).click();
         driver.findElement(By.xpath("//label[normalize-space()='Option 2']")).click();
-//        Select sl=new Select(driver.findElement(By.xpath("//label[normalize-space()='Option 3']")));
-//        sl.deselectByIndex(2);
+
     }
     @Test(priority = 2)
     public void radioButton()throws InterruptedException{
