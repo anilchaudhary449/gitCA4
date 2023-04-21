@@ -29,7 +29,7 @@ public class AppTest {
         driver.manage().window().maximize();
     }
 
-@Test
+@Test(priority = 0)
     public void DropDown()throws InterruptedException{
         Thread.sleep(10000);
         Select sl=new Select(driver.findElement(By.xpath("//select[@id='dropdowm-menu-1']")));
@@ -42,7 +42,7 @@ public class AppTest {
         sl3.selectByIndex(2);
 
     }
-    @Test
+    @Test(priority = 1)
     public void CheckBox() throws InterruptedException{
         //Thread.sleep(10000);
         driver.findElement(By.xpath("//label[normalize-space()='Option 1']")).click();
@@ -50,7 +50,7 @@ public class AppTest {
 //        Select sl=new Select(driver.findElement(By.xpath("//label[normalize-space()='Option 3']")));
 //        sl.deselectByIndex(2);
     }
-    @Test
+    @Test(priority = 2)
     public void radioButton()throws InterruptedException{
         WebElement radio_button = driver.findElement(By.cssSelector("input[value='yellow']"));
         radio_button.click();
